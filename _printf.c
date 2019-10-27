@@ -2,7 +2,7 @@
 /**
  * _printf - Printf function copy
  * Description: This is a modified version of printf
- * @s: String to print
+ * @format: String to print
  * Return: Number of characters printed
  */
 int _printf(const char *format, ...)

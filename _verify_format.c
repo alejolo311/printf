@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * verify_format - Verifies formats
+ * Description: This function verifies formats
+ * @s: String to verify
+ * Return: A function to execute
+ */
 int (*verify_format(const char *s))()
 {
 	pf_s ops[] = {
