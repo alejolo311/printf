@@ -5,8 +5,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
-#include <limits.h>
 
 /**
  * struct pf_specifier - Structure for specifiers
