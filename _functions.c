@@ -2,6 +2,7 @@
 int print_percent(char *s)
 {
 	char *p = s;
+
 	p++;
 	_putchar('%');
 	return (1);
@@ -10,6 +11,7 @@ int print_percent(char *s)
 int print_char(va_list args)
 {
 	char s = va_arg(args, int);
+
 	_putchar(s);
 	return (1);
 }
