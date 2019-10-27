@@ -1,4 +1,5 @@
+#include "holberton.h"
 int _putchar(char s)
 {
-	return(write(1, &s, 1));
+	return (write(1, &s, 1));
 }

@@ -7,8 +7,9 @@
  */
 int _printf(const char *format, ...)
 {
-	char *pf;
-	void (*f)();
+	int how_many = 0;
+	const char *pf;
+	int (*f)();
 
 	va_list args;
 
@@ -16,21 +17,25 @@ int _printf(const char *format, ...)
 
 	for (pf = format; *pf; pf++)
 	{
-		if(*pf == '%')
+		if (*pf == '%')
 		{
 			f = verify_format(pf);
 			if (f)
 			{
-				f(args);
+				how_many += f(args);
 				pf++;
 			}
 			else
 			{
 				_putchar(*pf);
+				how_many++;
 			}
 		}
 		else
+		{
 			_putchar(*pf);
+			how_many++;
+		}
 	}
 	va_end(args);
 	return (0);

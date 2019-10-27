@@ -5,21 +5,23 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-
-typedef struct pf_specifier {
+#include <stdio.h>
+#include <limits.h>
+typedef struct pf_specifier
+{
 	char *s;
-	void (*f)();
+	int (*f)();
 } pf_s;
 
 int _printf(const char *format, ...);
 int _putchar(char s);
 /* specifier funcs */
 
-void print_percent(char *s);
-void print_char(char *s);
-void print_string(char *s);
+int print_percent(char *s);
+int print_char(va_list args);
+int print_string(va_list args);
 
 /*specifier verification */
-void (*verify_format(char *s))();
+int (*verify_format(const char *s))();
 
 #endif
