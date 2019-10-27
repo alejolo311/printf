@@ -9,11 +9,8 @@ int print_percent(char *s)
 
 int print_char(va_list args)
 {
-	char *s = va_arg(args, char *);
-	int len = strlen(s);
-
-	if (len == 1)
-		_putchar(*s);
+	char s = va_arg(args, int);
+	_putchar(s);
 	return (1);
 }
 
