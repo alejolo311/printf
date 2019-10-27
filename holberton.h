@@ -7,6 +7,12 @@
 #include <string.h>
 #include <stdio.h>
 #include <limits.h>
+
+/**
+ * struct pf_specifier - Structure for specifiers
+ * @s: String to compare
+ * @f: Function to execute
+ */
 typedef struct pf_specifier
 {
 	char *s;
