@@ -35,9 +35,7 @@ int buffer_pos(char *buffer)
 	int pos = 0;
 	char *p = buffer;
 
-	while (*(p + pos))
-	{
+	while (*(p + pos) != '\0')
 		pos++;
-	}
 	return (pos);
 }

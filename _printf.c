@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	int (*f)();
 	char *buffer = buffer_init();
 
+	if (!buffer)
+		return (0);
 	va_list args;
 
 	va_start(args, format);
