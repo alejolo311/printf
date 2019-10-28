@@ -6,7 +6,7 @@
  * Description: this function prints print integers
  * Return: a void function, no return
  */
-int print_number(int n)
+int print_number(int n, char *buffer)
 {
 	int  k, l, len = 0;
 
@@ -15,7 +15,7 @@ int print_number(int n)
 	if (n < 0)
 	{
 		k = k * -1;
-		_putchar('-');
+		_putchar(buffer, '-');
 		len++;
 	}
 	while (l > 9 || l < -9)
@@ -26,18 +26,18 @@ int print_number(int n)
 
 	while (k > 9 || k < -9)
 	{
-		_putchar((n / k) % 10 + '0');
+		_putchar(buffer, (n / k) % 10 + '0');
 		k = k / 10;
 		len++;
 	}
 	if (n < 0)
 	{
-		_putchar((n % 10)  * -1 + '0');
+		_putchar(buffer, (n % 10)  * -1 + '0');
 		len++;
 	}
 	else
 	{
-		_putchar(n % 10 + '0');
+		_putchar(buffer, n % 10 + '0');
 		len++;
 	}
 	return (len);
@@ -49,12 +49,12 @@ int print_number(int n)
  * @args: Argument to print
  * Return: Length of @args
  */
-int print_d(va_list args)
+int print_d(va_list args, char *buffer)
 {
 	int number, len;
 
 	number = va_arg(args, int);
-	len = print_number(number);
+	len = print_number(number, buffer);
 
 	return (len);
 }
@@ -65,12 +65,12 @@ int print_d(va_list args)
  * @args: Argument to print
  * Return: length of @args
  */
-int print_i(va_list args)
+int print_i(va_list args, char *buffer)
 {
 	int number, len;
 
 	number = va_arg(args, int);
-	len = print_number(number);
+	len = print_number(number, buffer);
 
 	return (len);
 }

@@ -6,7 +6,7 @@
  * Description: this function prints print binaries
  * Return: len of @args in binary.
  */
-int print_b(va_list args)
+int print_b(va_list args, char *buffer)
 {
 	int len, i;
 	unsigned int number;
@@ -16,7 +16,7 @@ int print_b(va_list args)
 
 	if (number == 0)
 	{
-		print_number(0);
+		print_number(0, buffer);
 		return (1);
 	}
 	for (len = 0; number > 0; len++)
@@ -27,7 +27,7 @@ int print_b(va_list args)
 
 	for (i = len - 1; i >= 0; i--)
 	{
-		print_number(result[i]);
+		print_number(result[i], buffer);
 	}
 	return (len);
 }

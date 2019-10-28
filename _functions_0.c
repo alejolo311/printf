@@ -6,12 +6,12 @@
  * @s: Character to print
  * Return: Always 1
  */
-int print_percent(char *s)
+int print_percent(char *s, char *buffer)
 {
 	char *p = s;
 
 	p++;
-	_putchar('%');
+	_putchar(buffer, '%');
 	return (1);
 }
 
@@ -21,11 +21,11 @@ int print_percent(char *s)
  * @args: Argument to print
  * Return: Always 1
  */
-int print_char(va_list args)
+int print_char(va_list args, char *buffer)
 {
 	char s = va_arg(args, int);
 
-	_putchar(s);
+	_putchar(buffer, s);
 	return (1);
 }
 
@@ -35,7 +35,7 @@ int print_char(va_list args)
  * @args: String to print
  * Return: length of @args
  */
-int print_string(va_list args)
+int print_string(va_list args, char *buffer)
 {
 	char *s = va_arg(args, char *);
 	int len, i;
@@ -45,7 +45,7 @@ int print_string(va_list args)
 		len = strlen(s);
 		for (i = 0; i < len; i++)
 		{
-			_putchar(*(s + i));
+			_putchar(buffer, *(s + i));
 		}
 	}
 	else
@@ -54,7 +54,7 @@ int print_string(va_list args)
 		s = "(null)";
 		for (i = 0; i < len; i++)
 		{
-			_putchar(*(s + i));
+			_putchar(buffer, *(s + i));
 		}
 	}
 	return (len);

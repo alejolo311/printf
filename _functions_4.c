@@ -35,13 +35,13 @@ int print_number_u(unsigned int n)
  * @args: Argument to print
  * Return: Length of @args
  */
-int print_u(va_list args)
+int print_u(va_list args, char *buffer)
 {
 	unsigned int number;
 	int len;
 
 	number = va_arg(args, unsigned int);
-	len = print_number_u(number);
+	len = print_number_u(number, buffer);
 
 	return (len);
 }
@@ -52,7 +52,7 @@ int print_u(va_list args)
  * @args: Argument to print
  * Return: length of @args
  */
-int print_o(va_list args)
+int print_o(va_list args, char *buffer)
 {
 	unsigned int number;
 	int len, i;
@@ -61,7 +61,7 @@ int print_o(va_list args)
 	number = va_arg(args, unsigned int);
 	if (number == 0)
 	{
-		print_number(0);
+		print_number(0, buffer);
 		return (1);
 	}
 	for (len = 0; number > 0; len++)
@@ -70,7 +70,7 @@ int print_o(va_list args)
 		number = number / 8;
 	}
 	for (i = len - 1; i >= 0; i--)
-		print_number(result[i]);
+		print_number(result[i], buffer);
 	return (len);
 }
 
@@ -80,7 +80,7 @@ int print_o(va_list args)
  * @args: Argument to print
  * Return: length of @args
  */
-int print_x(va_list args)
+int print_x(va_list args, char *buffer)
 {
 	unsigned int number;
 	int len, i, result[32];
@@ -88,7 +88,7 @@ int print_x(va_list args)
 	number = va_arg(args, unsigned int);
 	if (number == 0)
 	{
-		print_number(0);
+		print_number(0, buffer);
 		return (1);
 	}
 	for (len = 0; number > 0; len++)
@@ -99,9 +99,9 @@ int print_x(va_list args)
 	for (i = len - 1; i >= 0; i--)
 	{
 		if (result[i] >= 10)
-			_putchar(result[i] + 87);
+			_putchar(buffer, result[i] + 87);
 		else
-			_putchar(result[i] + 48);
+			_putchar(buffer, result[i] + 48);
 	}
 	return (len);
 }
@@ -112,7 +112,7 @@ int print_x(va_list args)
  * @args: Argument to print
  * Return: length of @args
  */
-int print_X(va_list args)
+int print_X(va_list args, char *buffer)
 {
 	unsigned int number;
 	int len, i, result[32];
@@ -120,7 +120,7 @@ int print_X(va_list args)
 	number = va_arg(args, unsigned int);
 	if (number == 0)
 	{
-		print_number(0);
+		print_number(0, buffer);
 		return (1);
 	}
 	for (len = 0; number > 0; len++)
@@ -131,9 +131,9 @@ int print_X(va_list args)
 	for (i = len - 1; i >= 0; i--)
 	{
 		if (result[i] >= 10)
-			_putchar(result[i] + 55);
+			_putchar(buffer, result[i] + 55);
 		else
-			print_number(result[i]);
+			print_number(result[i], buffer);
 	}
 	return (len);
 }
