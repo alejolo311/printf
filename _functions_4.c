@@ -8,7 +8,7 @@
  */
 int print_number_u(unsigned int n)
 {
-	int  k, l, len = 0;
+	unsigned int  k, l, len = 0;
 
 	k = 1;
 	l = n;
@@ -54,10 +54,10 @@ int print_u(va_list args)
  */
 int print_o(va_list args)
 {
-	int number, len, i;
-	int result[32];
+	long number, len, i;
+	long result[50];
 
-	number = va_arg(args, int);
+	number = va_arg(args, long);
 	if (number == 0)
 	{
 		print_number(0);
@@ -81,10 +81,10 @@ int print_o(va_list args)
  */
 int print_x(va_list args)
 {
-	int number, len, i;
-	int result[32];
+	long number;
+	int len, i, result[32];
 
-	number = va_arg(args, int);
+	number = va_arg(args, long);
 	if (number == 0)
 	{
 		print_number(0);
@@ -100,7 +100,7 @@ int print_x(va_list args)
 		if (result[i] >= 10)
 			_putchar(result[i] + 87);
 		else
-			print_number(result[i]);
+			_putchar(result[i] + 48);
 	}
 	return (len);
 }
@@ -113,10 +113,10 @@ int print_x(va_list args)
  */
 int print_X(va_list args)
 {
-	int number, len, i;
-	int result[32];
+	long number;
+	int len, i, result[32];
 
-	number = va_arg(args, int);
+	number = va_arg(args, long);
 	if (number == 0)
 	{
 		print_number(0);
