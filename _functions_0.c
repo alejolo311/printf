@@ -54,8 +54,8 @@ int print_string(va_list args)
 		s = "(null)";
 		for (i = 0; i < len; i++)
 		{
-                        _putchar(*(s + i));
-                }
+			_putchar(*(s + i));
+		}
 	}
 	return (len);
 }
