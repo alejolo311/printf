@@ -8,10 +8,11 @@
  */
 int print_b(va_list args)
 {
-	int number, len, i;
+	int len, i;
+	unsigned int number;
 	int result[32];
 
-	number = va_arg(args, int);
+	number = va_arg(args, unsigned int);
 
 	if (number == 0)
 	{
