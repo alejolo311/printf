@@ -20,7 +20,7 @@ char *buffer_init()
  * @buffer: Buffer to add
  * Return:
  */
-void buffer_add(char *buffer, char s)
+int buffer_add(char *buffer, char s)
 {
 	int pos = buffer_pos(buffer);
 
@@ -29,6 +29,7 @@ void buffer_add(char *buffer, char s)
 		buffer_print(buffer, 1024);
 	}
 	*(buffer + pos - 1) = s;
+	return (pos);
 }
 
 /**

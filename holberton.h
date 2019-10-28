@@ -47,6 +47,6 @@ void buffer_print(char *buffer, int size);
 void buffer_remove(char *buffer);
 int buffer_pos(char *buffer);
 char *buffer_init();
-void buffer_add(char *buffer, char s);
+int buffer_add(char *buffer, char s);
 void buffer_flush(char *buffer);
 #endif

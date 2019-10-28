@@ -6,7 +6,7 @@
  * @s: Char to print
  * Return: 1
  */
-int _putchar(char s, char *buffer)
+int _putchar(char *buffer, char s)
 {
-	buffer_add(buffer, s);
+	return (buffer_add(buffer, s));
 }
