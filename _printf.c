@@ -25,18 +25,18 @@ int _printf(const char *format, ...)
 			f = verify_format(pf);
 			if (f)
 			{
-				how_many += f(args);
+				how_many += f(args, buffer);
 				pf++;
 			}
 			else
 			{
-				_putchar(*pf);
+				_putchar(*pf, buffer);
 				how_many++;
 			}
 		}
 		else
 		{
-			_putchar(*pf);
+			_putchar(*pf, buffer);
 			how_many++;
 		}
 	}
