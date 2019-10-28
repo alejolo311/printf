@@ -30,13 +30,13 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				_putchar(*pf, buffer);
+				_putchar(buffer, *pf);
 				how_many++;
 			}
 		}
 		else
 		{
-			_putchar(*pf, buffer);
+			_putchar(buffer, *pf);
 			how_many++;
 		}
 	}
