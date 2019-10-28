@@ -16,7 +16,7 @@ int (*verify_format(const char *s))()
 		{"i", print_i},
 		{"b", print_b},
 		{"u", print_u},
-		{"u", print_o},
+		{"o", print_o},
 		{"x", print_x},
 		{"X", print_X}
 	};

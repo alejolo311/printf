@@ -95,6 +95,13 @@ int print_x(va_list args)
 		result[len] = number % 16;
 		number = number / 16;
 	}
+	for (i = len - 1; i >= 0; i--)
+	{
+		if (result[i] >= 10)
+			_putchar(result[i] + 87);
+		else
+			print_number(result[i]);
+	}
 	return (len);
 }
 
@@ -117,8 +124,15 @@ int print_X(va_list args)
 	}
 	for (len = 0; number > 0; len++)
 	{
-		result[len] = number % 8;
-		number = number / 8;
+		result[len] = number % 16;
+		number = number / 16;
+	}
+	for (i = len - 1; i >= 0; i--)
+	{
+		if (result[i] >= 10)
+			_putchar(result[i] + 55);
+		else
+			print_number(result[i]);
 	}
 	return (len);
 }
