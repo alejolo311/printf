@@ -6,7 +6,7 @@
  * Description: this function prints print integers
  * Return: a void function, no return
  */
-int print_number_u(unsigned int n)
+int print_number_u(unsigned int n, char *buffer)
 {
 	unsigned int  k, l, len = 0;
 
