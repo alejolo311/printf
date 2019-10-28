@@ -17,15 +17,20 @@ typedef struct pf_specifier
 	int (*f)();
 } pf_s;
 
+/* Specifier verification */
+int (*verify_format(const char *s))();
+
+/* Printf function */
 int _printf(const char *format, ...);
 int _putchar(char s);
-/* specifier funcs */
 
+/* Specifiers functions 0 */
 int print_percent(char *s);
 int print_char(va_list args);
 int print_string(va_list args);
 
-/*specifier verification */
-int (*verify_format(const char *s))();
+/* Specifiers functions 1*/
+int print_d(va_list args);
+int print_i(va_list args);
 
 #endif
