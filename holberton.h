@@ -33,8 +33,13 @@ int print_string(va_list args);
 int print_d(va_list args);
 int print_i(va_list args);
 int print_number(int n);
-/* Advanced Tasks */
 
+/* Advanced Tasks */
 int print_b(va_list args);
+int print_u(va_list args);
+int print_o(va_list args);
+int print_x(va_list args);
+int print_X(va_list args);
+int print_number_u(unsigned int);
 
 #endif
