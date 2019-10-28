@@ -26,7 +26,7 @@ void buffer_add(char *buffer)
 
 	if (pos >= 1023)
 	{
-		buffer_print(buffer);
+		buffer_print(buffer, 1024);
 	}
 }
 
