@@ -13,7 +13,8 @@ int (*verify_format(const char *s))()
 		{"c", print_char},
 		{"s", print_string},
 		{"d", print_d},
-		{"i", print_i}
+		{"i", print_i},
+		{"b", print_b}
 	};
 	int i, ops_len = sizeof(ops) / sizeof(pf_s);
 	const char *p = s;
