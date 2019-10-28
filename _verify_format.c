@@ -11,7 +11,9 @@ int (*verify_format(const char *s))()
 	pf_s ops[] = {
 		{"%", print_percent},
 		{"c", print_char},
-		{"s", print_string}
+		{"s", print_string},
+		{"d", print_d},
+		{"i", print_i}
 	};
 	int i, ops_len = sizeof(ops) / sizeof(pf_s);
 	const char *p = s;
