@@ -3,8 +3,7 @@
 /**
  * print_number - this function print integers
  * @n: the integer of the entry
- * a blank line
- * Description: this function prints print integers?
+ * Description: this function prints print integers
  * Return: a void function, no return
  */
 int print_number(int n)

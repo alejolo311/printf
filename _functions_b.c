@@ -1,11 +1,10 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_number - this function print integers
- * @n: the integer of the entry
- * a blank line
- * Description: this function prints print integers?
- * Return: a void function, no return
+ * print_b - this function print binaries
+ * @args: the arguments
+ * Description: this function prints print binaries
+ * Return: len of @args in binary.
  */
 int print_b(va_list args)
 {
@@ -27,7 +26,6 @@ int print_b(va_list args)
 
 	for (i = len - 1; i >= 0; i--)
 	{
-		
 		print_number(result[i]);
 	}
 	return (len);

@@ -32,7 +32,7 @@ int print_string(va_list args);
 /* Specifiers functions 1*/
 int print_d(va_list args);
 int print_i(va_list args);
-
+int print_number(int n);
 /* Advanced Tasks */
 
 int print_b(va_list args);
