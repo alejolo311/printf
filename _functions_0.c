@@ -38,17 +38,24 @@ int print_char(va_list args)
 int print_string(va_list args)
 {
 	char *s = va_arg(args, char *);
-	int len;
+	int len, i;
 
 	if (s)
 	{
 		len = strlen(s);
-		write(1, s, len);
+		for (i = 0; i < len; i++)
+		{
+			_putchar(*(s + i));
+		}
 	}
 	else
 	{
 		len = 6;
-		write(1, "(null)", 6);
+		s = "(null)";
+		for (i = 0; i < len; i++)
+		{
+                        _putchar(*(s + i));
+                }
 	}
 	return (len);
 }
