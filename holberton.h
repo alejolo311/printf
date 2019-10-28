@@ -42,4 +42,11 @@ int print_x(va_list args);
 int print_X(va_list args);
 int print_number_u(unsigned int);
 
+/* Buffer functions */
+void buffer_print(char *buffer, int size);
+void buffer_remove(char *buffer);
+int buffer_pos(char *buffer);
+char *buffer_init();
+void buffer_add(char *buffer);
+void buffer_flush(char *buffer);
 #endif

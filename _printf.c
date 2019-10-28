@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	int how_many = 0;
 	const char *pf;
 	int (*f)();
+	char *buffer = buffer_init();
 
 	va_list args;
 
@@ -17,7 +18,6 @@ int _printf(const char *format, ...)
 
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
 	for (pf = format; *pf; pf++)
 	{
 		if (*pf == '%')
@@ -41,5 +41,6 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
+	buffer_remove(buffer);
 	return (how_many);
 }
