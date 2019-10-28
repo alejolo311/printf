@@ -12,34 +12,20 @@ int print_number_u(unsigned int n)
 
 	k = 1;
 	l = n;
-	if (n < 0)
-	{
-		k = k * -1;
-		_putchar('-');
-		len++;
-	}
-	while (l > 9 || l < -9)
+	while (l > 9)
 	{
 		l = l / 10;
 		k = k * 10;
 	}
 
-	while (k > 9 || k < -9)
+	while (k > 9)
 	{
 		_putchar((n / k) % 10 + '0');
 		k = k / 10;
 		len++;
 	}
-	if (n < 0)
-	{
-		_putchar((n % 10)  * -1 + '0');
-		len++;
-	}
-	else
-	{
-		_putchar(n % 10 + '0');
-		len++;
-	}
+	_putchar(n % 10 + '0');
+	len++;
 	return (len);
 }
 
@@ -82,6 +68,8 @@ int print_o(va_list args)
 		result[len] = number % 8;
 		number = number / 8;
 	}
+	for (i = len - 1; i >= 0; i--)
+		print_number(result[i]);
 	return (len);
 }
 
@@ -104,8 +92,8 @@ int print_x(va_list args)
 	}
 	for (len = 0; number > 0; len++)
 	{
-		result[len] = number % 8;
-		number = number / 8;
+		result[len] = number % 16;
+		number = number / 16;
 	}
 	return (len);
 }
