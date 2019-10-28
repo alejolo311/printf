@@ -20,11 +20,11 @@ int print_number_u(unsigned int n, char *buffer)
 
 	while (k > 9)
 	{
-		_putchar((n / k) % 10 + '0');
+		_putchar(buffer, (n / k) % 10 + '0');
 		k = k / 10;
 		len++;
 	}
-	_putchar(n % 10 + '0');
+	_putchar(buffer, n % 10 + '0');
 	len++;
 	return (len);
 }
