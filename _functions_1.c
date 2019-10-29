@@ -2,8 +2,9 @@
 
 /**
  * print_number - this function print integers
- * @n: the integer of the entry
  * Description: this function prints print integers
+ * @n: the integer of the entry
+ * @buffer: Buffer
  * Return: a void function, no return
  */
 int print_number(int n, char *buffer)
@@ -47,6 +48,7 @@ int print_number(int n, char *buffer)
  * print_d - Prints integers
  * Description: This function prints integers
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: Length of @args
  */
 int print_d(va_list args, char *buffer)
@@ -63,6 +65,7 @@ int print_d(va_list args, char *buffer)
  * print_i - Prints integers
  * Description: This function prints integers
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: length of @args
  */
 int print_i(va_list args, char *buffer)

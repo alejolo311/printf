@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * struct pf_specifier - Structure for specifiers
@@ -48,5 +49,5 @@ void buffer_remove(char *buffer);
 int buffer_pos(char *buffer);
 char *buffer_init();
 int buffer_add(char *buffer, char s);
-void buffer_flush(char *buffer);
+char *buffer_flush(char *buffer);
 #endif

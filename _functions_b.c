@@ -2,8 +2,9 @@
 #include <stdio.h>
 /**
  * print_b - this function print binaries
- * @args: the arguments
  * Description: this function prints print binaries
+ * @args: the arguments
+ * @buffer: Buffer
  * Return: len of @args in binary.
  */
 int print_b(va_list args, char *buffer)

@@ -11,10 +11,8 @@ int _printf(const char *format, ...)
 	const char *pf;
 	int (*f)();
 	char *buffer = buffer_init();
-
-	if (!buffer)
-		return (0);
 	va_list args;
+	int size;
 
 	va_start(args, format);
 
@@ -43,6 +41,9 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	buffer_remove(buffer);
+	size = buffer_pos(buffer);
+	if (size > 0)
+		buffer_print(buffer, size);
+	free(buffer);
 	return (how_many);
 }

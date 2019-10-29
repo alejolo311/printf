@@ -2,8 +2,9 @@
 
 /**
  * print_number_u - this function print unsigned integers
- * @n: the integer of the entry
  * Description: this function prints print integers
+ * @n: the integer of the entry
+ * @buffer: Buffer
  * Return: a void function, no return
  */
 int print_number_u(unsigned int n, char *buffer)
@@ -33,6 +34,7 @@ int print_number_u(unsigned int n, char *buffer)
  * print_u - Prints unsigned integers
  * Description: This function prints unsigned integers
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: Length of @args
  */
 int print_u(va_list args, char *buffer)
@@ -50,6 +52,7 @@ int print_u(va_list args, char *buffer)
  * print_o - Prints octals
  * Description: This function prints octals
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: length of @args
  */
 int print_o(va_list args, char *buffer)
@@ -78,6 +81,7 @@ int print_o(va_list args, char *buffer)
  * print_x - Prints hexadecimals
  * Description: This function prints hexadecimals
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: length of @args
  */
 int print_x(va_list args, char *buffer)
@@ -110,6 +114,7 @@ int print_x(va_list args, char *buffer)
  * print_X - Prints hexadecimals in uppercase
  * Description: This function prints hexadecimals in uppsercase
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: length of @args
  */
 int print_X(va_list args, char *buffer)

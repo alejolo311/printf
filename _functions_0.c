@@ -4,6 +4,7 @@
  * print_percent - Prints percent symbol
  * Description: This function prints percent symbol
  * @s: Character to print
+ * @buffer: Buffer
  * Return: Always 1
  */
 int print_percent(char *s, char *buffer)
@@ -19,6 +20,7 @@ int print_percent(char *s, char *buffer)
  * print_char - Prints chars
  * Description: This function prints chars
  * @args: Argument to print
+ * @buffer: Buffer
  * Return: Always 1
  */
 int print_char(va_list args, char *buffer)
@@ -33,6 +35,7 @@ int print_char(va_list args, char *buffer)
  * print_string - Prints a string
  * Description: This function prints a string
  * @args: String to print
+ * @buffer: Buffer
  * Return: length of @args
  */
 int print_string(va_list args, char *buffer)
