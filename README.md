@@ -5,6 +5,7 @@
 [TOCM]
 
 [TOC]
+
 #Authors
 
 #Features
@@ -29,10 +30,12 @@
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
 | `destroy()`   | **Destroy your computer!**     |
+
 [Files](https://github.com/alejolo311/printf)
 ##Task 2
 [Files](https://github.com/alejolo311/printf)
 ##Task 3
+
 | Function name | Description                    |
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
@@ -40,16 +43,20 @@
 
 [Files](https://github.com/alejolo311/printf)
 ##Task 4
+
 | Function name | Description                    |
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
 | `destroy()`   | **Destroy your computer!**     |
+
 [Files](https://github.com/alejolo311/printf)
 ##Task 5
+
 | Function name | Description                    |
 | ------------- | ------------------------------ |
 | `help()`      | Display the help window.       |
 | `destroy()`   | **Destroy your computer!**     |
+
 [Files](https://github.com/alejolo311/printf)
 ##Task 6
 | Function name | Description                    |
