@@ -43,6 +43,9 @@ int print_X(va_list args, char *buffer);
 int print_number_u(unsigned int, char *buffer);
 int print_hexa(char s, char *buffer);
 int print_S(va_list args, char *buffer);
+int print_r(va_list args, char *buffer);
+int print_p(va_list args, char *buffer);
+int print_R(va_list args, char *buffer);
 
 /* Buffer functions */
 void buffer_print(char *buffer, int size);
