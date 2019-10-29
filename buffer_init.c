@@ -27,6 +27,11 @@ int buffer_add(char *buffer, char s)
 
 	if (i < 1024)
 		*(buffer + i) = s;
+	else
+	{
+		buffer_print(buffer, 1024);
+		buffer = buffer_flush(buffer);
+	}
 	return (i);
 }
 
