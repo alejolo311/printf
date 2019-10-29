@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	int (*f)();
 	char *buffer = buffer_init();
 	va_list args;
-	int size;
 
 	va_start(args, format);
 	if (!buffer)
@@ -22,8 +21,6 @@ int _printf(const char *format, ...)
 		free(buffer);
 		return (-1);
 	}
-	if (format[0] == '%' && format[1] == ' ' && !format[2])
-		return (-1);
 	for (pf = format; *pf; pf++)
 	{
 		if (*pf == '%')
@@ -47,8 +44,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	size = buffer_pos(buffer);
-	buffer_print(buffer, size);
+	buffer_print(buffer, buffer_pos(buffer));
 	free(buffer);
 	return (how_many);
 }

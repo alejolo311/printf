@@ -25,12 +25,13 @@ int buffer_add(char *buffer, char s)
 {
 	int i = buffer_pos(buffer);
 
-	if (i < 1024)
+	if (i < 1023)
 		*(buffer + i) = s;
 	else
 	{
-		buffer_print(buffer, 1024);
+		buffer_print(buffer, 1023);
 		buffer = buffer_flush(buffer);
+		buffer[0] = s;
 	}
 	return (i);
 }
@@ -45,7 +46,7 @@ char *buffer_flush(char *buffer)
 {
 	int i;
 
-	for (i = 0; i < 1024; i++)
+	for (i = 0; i < 1023; i++)
 	{
 		buffer[i] = 0;
 	}
