@@ -3,7 +3,8 @@
 /**
  * rot13 - this functions encrypt using the rot13 algorithm
  * a blank line
- *@s: this parameter is the string to encrypt
+ * @s: this parameter is the string to encrypt
+ * @buffer: Buffer
  * Description: this function encrypts using the rot13 algorithm)?
  * section header: the header of this function is holberton.h)*
  * Return: this return a char.
@@ -13,21 +14,25 @@ int rot13(char *buffer, char *s)
 
 	char low1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char low2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int c, low_c;
+	int c, low_c, is_alpha;
 
 	c = 0;
 	while (*(s + c) != '\0')
 	{
 		low_c = 0;
+		is_alpha = 0;
 		while (low1[low_c] != '\0')
 		{
 			if (*(s + c) == low1[low_c])
 			{
 				_putchar(buffer, low2[low_c]);
+				is_alpha = 1;
 				break;
 			}
 			low_c++;
 		}
+		if (is_alpha == 0)
+			_putchar(buffer, *(s + c));
 		c++;
 	}
 	return (c);
@@ -45,6 +50,7 @@ int print_R(va_list args, char *buffer)
 
 	int len, i;
 	char *s = va_arg(args, char*);
+
 	if (s)
 	{
 		len = rot13(buffer, s);
