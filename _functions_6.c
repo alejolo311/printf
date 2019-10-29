@@ -9,16 +9,16 @@
 int print_hexa(char s, char *buffer)
 {
 	char number;
-	int len, i, result[32];
+	int len, len2, i, result[32];
+
+	len2 = 0;
 
 	number = s;
-	if (number == 0)
-	{
-		print_number(0, buffer);
-		return (1);
-	}
 	if (number <= 16)
+	{
 		_putchar(buffer, '0');
+		len2++;
+	}
 	for (len = 0; number > 0; len++)
 	{
 		result[len] = number % 16;
@@ -31,7 +31,7 @@ int print_hexa(char s, char *buffer)
 		else
 			print_number(result[i], buffer);
 	}
-	return (len);
+	return (len + len2);
 }
 
 /**
@@ -56,7 +56,10 @@ int print_S(va_list args, char *buffer)
 				_putchar(buffer, '\\');
 				c++;
 				_putchar(buffer, 'x');
-				c += print_hexa(*(s + i), buffer);
+				if (*(s + i) == '\0')
+					c += print_hexa(0, buffer);
+				else
+					c += print_hexa(*(s + i), buffer);
 			}
 			else
 				_putchar(buffer, *(s + i));
