@@ -18,7 +18,10 @@ int _printf(const char *format, ...)
 	if (!buffer)
 		return (0);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
+	{
+		free(buffer);
 		return (-1);
+	}
 	for (pf = format; *pf; pf++)
 	{
 		if (*pf == '%')
