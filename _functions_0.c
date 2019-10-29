@@ -23,6 +23,7 @@ int print_percent(char *s, char *buffer)
  */
 int print_char(va_list args, char *buffer, int buff_count)
 {
+
 	buffer[buff_count] = va_arg(args, int);
 	return (1);
 }
@@ -34,23 +35,30 @@ int print_char(va_list args, char *buffer, int buff_count)
  * @buffer: Buffer
  * Return: length of @args
  */
-int print_string(va_list args, char *buffer)
+int print_string(va_list args, char *buffer, int buff_count)
 {
 	char *s = va_arg(args, char *);
-	int len, i;
+	int i;
+
 
 	if (s)
 	{
-		len = strlen(s);
-		for (i = 0; i < len; i++)
-			_putchar(buffer, *(s + i));
+		while (s[i])
+		{
+			buffer[buff_count] = s[i];
+			i++;
+			buff_count++;
+		}
 	}
 	else
 	{
-		len = 6;
 		s = "(null)";
-		for (i = 0; i < len; i++)
-			_putchar(buffer, *(s + i));
+		while (s[i])
+		{
+			buffer[buff_count] = s[i];
+			i++;
+			buff_count++;
+		}
 	}
-	return (len);
+	return (buff_count);
 }

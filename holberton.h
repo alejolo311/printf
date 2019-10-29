@@ -27,7 +27,7 @@ int _putchar(char *buffer, char s);
 /* Specifiers functions 0 */
 int print_percent(char *s, char *buffer);
 int print_char(va_list args, char *buffer, int buff_count);
-int print_string(va_list args, char *buffer);
+int print_string(va_list args, char *buffer,int n);
 
 /* Specifiers functions 1*/
 int print_d(va_list args, char *buffer);
@@ -47,6 +47,6 @@ void buffer_print(char *buffer, int size);
 void buffer_remove(char *buffer);
 int buffer_pos(char *buffer);
 char *buffer_init();
-int buffer_add(char *buffer, char s);
+char *buffer_write(char *buffer, const char *src, unsigned int n);
 char *buffer_flush(char *buffer);
 #endif

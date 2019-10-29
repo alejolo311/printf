@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * buffer_init - Initialize the buffer
  * Description: Function to initialize the buffer
@@ -17,18 +18,17 @@ char *buffer_init()
  * @s: Character to add
  * Return: Size of @buffer
  */
-int buffer_add(char *buffer, char s)
+char *buffer_write(char *buffer, const char *src, unsigned int buff_count)
 {
-	int i = buffer_pos(buffer);
+	int i;
 
-	if (i < 1024)
-		*(buffer + i) = s;
-	else
+	for (i = 0; src[i]; i++, buff_count++)
 	{
-		buffer_print(buffer, 1024);
-		buffer = buffer_flush(buffer);
+
+		buffer[buff_count] = src[i];
 	}
-	return (i);
+
+	return (buffer);
 }
 
 /**
@@ -58,20 +58,4 @@ char *buffer_flush(char *buffer)
 void buffer_print(char *buffer, int size)
 {
 	write(1, buffer, size);
-}
-
-/**
- * buffer_pos - Position of the buffer
- * Description: Function to know the len of the buffer
- * @buffer: Buffer to know the len
- * Return: Length of the buffer
- */
-int buffer_pos(char *buffer)
-{
-	int pos = 0;
-	char *p = buffer;
-
-	while (*(p + pos) != '\0')
-		pos++;
-	return (pos);
 }

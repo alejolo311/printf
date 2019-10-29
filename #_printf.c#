@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	buffer_print(buffer, 16);
+	buffer_print(buffer, buff_count);
 	free(buffer);
 	return (buff_count);
 }
