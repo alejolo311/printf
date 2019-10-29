@@ -42,10 +42,24 @@
 - Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
 
 ### Test Cases
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
+- [x] Task 4
+- [x] Task 5
+- [x] Task 6
+- [x] Task 7
 
 ## %s
 
 ### Test Cases
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
+- [x] Task 4
+- [x] Task 5
+- [x] Task 6
+- [x] Task 7
 
 - Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
 - Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
@@ -54,6 +68,13 @@
 ## %%
 
 ### Test Cases
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
+- [x] Task 4
+- [x] Task 5
+- [x] Task 6
+- [x] Task 7
 
 - Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
 - Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
