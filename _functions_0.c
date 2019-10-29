@@ -25,6 +25,11 @@ int print_char(va_list args, char *buffer)
 {
 	char s = va_arg(args, int);
 
+	if (s == '\0')
+	{
+		write(1, &s, 1);
+		return (1);
+	}
 	_putchar(buffer, s);
 	return (1);
 }
