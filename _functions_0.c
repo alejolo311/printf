@@ -9,9 +9,7 @@
  */
 int print_percent(char *s, char *buffer)
 {
-	char *p = s;
-
-	p++;
+	s++;
 	_putchar(buffer, '%');
 	return (1);
 }
@@ -54,11 +52,7 @@ int print_string(va_list args, char *buffer)
 	else
 	{
 		len = 6;
-		s = "(null)";
-		for (i = 0; i < len; i++)
-		{
-			_putchar(buffer, *(s + i));
-		}
+		write(1, "(null)", len);
 	}
 	return (len);
 }
