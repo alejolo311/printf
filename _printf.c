@@ -43,8 +43,7 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	size = buffer_pos(buffer);
-	if (size > 0)
-		buffer_print(buffer, size);
+	buffer_print(buffer, size);
 	free(buffer);
 	return (how_many);
 }
