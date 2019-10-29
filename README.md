@@ -7,6 +7,14 @@
 4. [Test Cases](#Test-cases)
 
 # Authors
+ 👤 **Alejandro López**
+
+- Twitter: [@alejolo311](https://twitter.com/alejolo311)
+- Github: [@alejolo311](https://github.com/alejolo311)
+👤 **Juan Marcos Cabezas**
+
+- Twitter: [@juanmarcab](https://twitter.com/juanmarcab)
+- Github: [@juanmarcoscabezas](https://github.com/juanmarcoscabezas)
 
 # Features
 - Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
