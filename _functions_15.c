@@ -30,7 +30,7 @@ int rot13(char *buffer, char *s)
 		}
 		c++;
 	}
-	return (c);
+	return (c - 1);
 }
 
 /**
