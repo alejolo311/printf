@@ -45,14 +45,14 @@ int print_string(va_list args, char *buffer)
 	{
 		len = strlen(s);
 		for (i = 0; i < len; i++)
-		{
 			_putchar(buffer, *(s + i));
-		}
 	}
 	else
 	{
 		len = 6;
-		write(1, "(null)", len);
+		s = "(null)";
+		for (i = 0; i < len; i++)
+			_putchar(buffer, *(s + i));
 	}
 	return (len);
 }
