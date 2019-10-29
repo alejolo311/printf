@@ -29,10 +29,11 @@
 # Tasks
 ## Task 0
 
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
+| Specifier | Function name                    |
+|: ------------- :|: ------------------------------ :|
+| %c      | `print_char()`       |
+| %s   | `print_string()`     |
+| %%   | `print_percen()`     |
 
 [Files](https://github.com/alejolo311/printf/blob/master/_functions_0.c)
 
