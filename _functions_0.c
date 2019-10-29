@@ -21,11 +21,9 @@ int print_percent(char *s, char *buffer)
  * @buffer: Buffer
  * Return: Always 1
  */
-int print_char(va_list args, char *buffer)
+int print_char(va_list args, char *buffer, int buff_count)
 {
-	char s = va_arg(args, int);
-
-	_putchar(buffer, s);
+	buffer[buff_count] = va_arg(args, int);
 	return (1);
 }
 

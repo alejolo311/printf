@@ -7,10 +7,6 @@
 char *buffer_init()
 {
 	char *buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer)
-		buffer = buffer_flush(buffer);
-
 	return (buffer);
 }
 

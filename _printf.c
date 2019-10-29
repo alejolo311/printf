@@ -8,13 +8,17 @@
 int _printf(const char *format, ...)
 {
 	int how_many = 0;
+	int buff_count, i;
 	const char *pf;
 	int (*f)();
-	char *buffer = buffer_init();
+	char *buffer;
 	va_list args;
-	int size;
+
 
 	va_start(args, format);
+
+	buff_count = 0;
+	buffer = buffer_init();
 	if (!buffer)
 		return (0);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
@@ -24,31 +28,30 @@ int _printf(const char *format, ...)
 	}
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	for (pf = format; *pf; pf++)
+	for (pf = format, i = 0; *pf;pf++, i++)
 	{
 		if (*pf == '%')
 		{
 			f = verify_format(pf);
 			if (f)
 			{
-				how_many += f(args, buffer);
+				buff_count += f(args, buffer, buff_count);
 				pf++;
 			}
 			else
 			{
-				_putchar(buffer, *pf);
-				how_many++;
+				buffer[buff_count] = *pf;
+				buff_count++;
 			}
 		}
 		else
 		{
-			_putchar(buffer, *pf);
-			how_many++;
+			buffer[buff_count] = format[i];
+			buff_count++;
 		}
 	}
 	va_end(args);
-	size = buffer_pos(buffer);
-	buffer_print(buffer, size);
+	buffer_print(buffer, buff_count);
 	free(buffer);
-	return (how_many);
+	return (buff_count);
 }

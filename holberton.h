@@ -26,7 +26,7 @@ int _putchar(char *buffer, char s);
 
 /* Specifiers functions 0 */
 int print_percent(char *s, char *buffer);
-int print_char(va_list args, char *buffer);
+int print_char(va_list args, char *buffer, int buff_count);
 int print_string(va_list args, char *buffer);
 
 /* Specifiers functions 1*/
