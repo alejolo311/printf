@@ -1,4 +1,4 @@
-.TH _PRINTF 3 "30 Oct 2019" "HOLBERTON 10 Cohort 1.0" "User Commands"
+.TH _PRINTF 3 "30 Oct 2019" "Holberton School Cohort 10 1.0" "User Commands"
 .SH NAME
 _printf
 - formatted output conversion
@@ -215,8 +215,15 @@ To print a string:
 .PP
 .RS +4
 #include "holberton.h"
+
 .RE
 .RS +4
+/**
+ * main - Entry point
+ * Description: Main function to use printf
+ * @void: Void parameter
+ * Return: Length of the char (n)
+ */
 int main(void)
 .RE
 .RS +4
