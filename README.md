@@ -37,7 +37,7 @@ This project was built by Alejandro López and Juan Marcos Cabezas
  - compile on Ubuntu 14.04 LTS
  - compile with gcc 4.8.4
  
-### Flags use to compile
+### Flags to compile
 
 `$ gcc -Wall -Werror -Wextra -pedantic *.c`
 
