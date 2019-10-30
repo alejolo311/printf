@@ -7,6 +7,7 @@ This project was built by Alejandro López and Juan Marcos Cabezas
 # Table of Contents
 1. [Authors](#Authors)
 2. [Features](#Features)
+3. [How Use](#How-Use)
 3. [Tasks](#Tasks)
 4. [General Test Cases](#general-Test-Cases)
 
@@ -25,6 +26,73 @@ This project was built by Alejandro López and Juan Marcos Cabezas
 - The main function uses structures to call the function corresponding to the case, this allows greater code scalability.
 - As in the original printf, the function has a buffer that stores and prints the output strings every 1024 bytes.
 - Just like the original printf, the returns of our function are the number of characters printed, when the input is incorrect the return is error -1
+
+
+# How Use
+
+## How to compile
+
+### Requirements
+
+ - compile on Ubuntu 14.04 LTS
+ - compile with gcc 4.8.4
+
+### Main Example 
+
+```c
+#include <limits.h>
+#include <stdio.h>
+#include "holberton.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    int len;
+    int len2;
+    unsigned int ui;
+    void *addr;
+
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
+    return (0);
+}
+
+```
+
+
+### Flags
+
+`$ gcc -Wall -Werror -Wextra -pedantic *.c`
+
+##
 
 # Tasks
 ## Task 0
