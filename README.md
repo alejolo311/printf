@@ -42,13 +42,9 @@
 - Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
 
 ### Test Cases
-- [x] Task 1
-- [x] Task 2
-- [x] Task 3
-- [x] Task 4
-- [x] Task 5
-- [x] Task 6
-- [x] Task 7
+- [x] _printf("%c", NULL);
+- [x] _printf("%c", 'A');
+- [x] _printf("%c", 'A');
 
 ## %s
 
@@ -57,15 +53,31 @@
 - Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
 
 ### Test Cases
-- [x] Task 1
-- [x] Task 2
-- [x] Task 3
-- [x] Task 4
-- [x] Task 5
-- [x] Task 6
-- [x] Task 7
+- [x] _printf("%s", "holberton");
+- [x] _printf("%ss", "holberton");
+- [x] _printf("%s", "");
+- [x] _printf("%s");
+
 
 ## %%
+
+- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
+- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
+- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
+
+### Test Cases
+- [x] _printf("%%");
+
+[Files](https://github.com/alejolo311/printf/blob/master/_functions_0.c)
+
+## Task 1
+
+| Specifier | Function name                    |
+|:-------------:|:------------------------------:|
+| %d   | `print_d()`       |
+| %i   | `print_i()`     |
+
+## %d
 
 - Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
 - Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
@@ -80,136 +92,31 @@
 - [x] Task 6
 - [x] Task 7
 
-[Files](https://github.com/alejolo311/printf/blob/master/_functions_0.c)
+## %i
 
-## Task 1
+- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
+- Full-featured: Real-time Preview, Image (cross-domain) upload, Preformatted text/Code blocks/Tables insert, Code fold, Search replace, Read only, Themes, Multi-languages, L18n, HTML entities, Code syntax highlighting...;
+- Markdown Extras : Support ToC (Table of Contents), Emoji, Task lists, @Links...;
 
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
+### Test Cases
+- [x] Task 1
+- [x] Task 2
+- [x] Task 3
+- [x] Task 4
+- [x] Task 5
+- [x] Task 6
+- [x] Task 7
 
-[Files](https://github.com/alejolo311/printf)
+[Files](https://github.com/alejolo311/printf/blob/master/_functions_1.c)
 
 ## Task 2
 
-[Files](https://github.com/alejolo311/printf)
+- Support Standard Markdown / CommonMark and GFM(GitHub Flavored Markdown);
 
-## Task 3
+- [x] The Manual.
 
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
+[Files](https://github.com/alejolo311/printf/blob/master/man_3_printf)
 
-[Files](https://github.com/alejolo311/printf)
-
-## Task 4
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 5
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 6
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 7
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 8
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 9
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 10
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 11
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 12
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-## Task 13
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 14
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
-
-## Task 15
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-[Files](https://github.com/alejolo311/printf)
 
 ## Task Checklist
 
@@ -230,3 +137,6 @@
 - [x] Task 15
 
 # General Test Cases
+
+- [x] printf(NULL);
+- [x] printf("%");
