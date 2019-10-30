@@ -36,6 +36,10 @@ This project was built by Alejandro López and Juan Marcos Cabezas
 
  - compile on Ubuntu 14.04 LTS
  - compile with gcc 4.8.4
+ 
+### Flags use to compile
+
+`$ gcc -Wall -Werror -Wextra -pedantic *.c`
 
 ### Main Example 
 
@@ -87,10 +91,6 @@ int main(void)
 
 ```
 
-
-### Flags
-
-`$ gcc -Wall -Werror -Wextra -pedantic *.c`
 
 ##
 
