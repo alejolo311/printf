@@ -96,8 +96,6 @@ This project was built by Alejandro López and Juan Marcos Cabezas
 
 ## Task 2
 
-- 
-
 - [x] The Manual.
 
 [Files](https://github.com/alejolo311/printf/blob/master/man_3_printf)
